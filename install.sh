@@ -78,7 +78,7 @@ ln -sf /usr/bin/nodejs /usr/bin/node || true
 
 echo -e " \e[32mConfiguring Timezone...\e[0m"
 sudo ln -sf /usr/share/zoneinfo/Europe/Kyiv /usr/share/zoneinfo/Europe/Kiev
-sudo ln -fs /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime
+sudo ln -fs /usr/share/zoneinfo/$TIME_ZONE /etc/localtime
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
 echo -e " \e[32mInstalling MySQL Server ...\e[0m"
